@@ -11,10 +11,13 @@
     "gulp-replace": "^0.5.4",
     "gulp-sass": "^2.0.4",
     "gulp-uglify": "^1.4.2",
-    "js-yaml": "^3.4.3"
+    "js-yaml": "^3.4.3",
+    "snyk": "^1.83.0"
   },
   "scripts": {
-    "gulp": "gulp"
+    "gulp": "gulp",
+    "snyk-protect": "snyk protect",
+    "prepare": "npm run snyk-protect"
   },
   "license": "MIT",
   "repository": {
@@ -29,8 +32,16 @@
     "gulp-babel": "^6.1.2"
   },
   "standard": {
-    "ignore": ["javascripts/search_worker.js"],
+    "ignore": [
+      "javascripts/search_worker.js"
+    ],
     "parser": "babel-eslint",
-    "globals": ["$", "importScripts", "lunr", "Worker"]
-  }
+    "globals": [
+      "$",
+      "importScripts",
+      "lunr",
+      "Worker"
+    ]
+  },
+  "snyk": true
 }
