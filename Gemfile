@@ -16,5 +16,5 @@ gem 'activesupport', '~> 4.2'
 gem 'rake'
 
 group :test do
-  gem 'html-proofer', '~> 3.0'
+  gem 'html-proofer', '~> 3.0', '>= 3.0.4'
 end
